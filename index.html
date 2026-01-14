@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARQDesign - Arquitetura Excepcional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Serif+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="brand-accent">ARQ</span>DESIGN
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#portfolio" class="nav-link">Portfólio</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#contact" class="nav-contact">Contato</a>
+            </div>
+            
+            <button class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <div class="hero-pattern"></div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        ARQUITETURA<br>
+                        <span class="hero-accent">EXCEPCIONAL</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Criamos espaços únicos que combinam funcionalidade, estética e sustentabilidade. 
+                        Cada projeto é uma obra de arte arquitetônica.
+                    </p>
+                    
+                    <button class="hero-cta" onclick="scrollToSection('portfolio')">
+                        EXPLORE NOSSOS PROJETOS
+                    </button>
+                </div>
+                
+                <div class="scroll-indicator" onclick="scrollToSection('portfolio')">
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </div>
+            
+            <div class="decorative-elements">
+                <div class="deco-1"></div>
+                <div class="deco-2"></div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        NOSSO <span class="title-accent">PORTFÓLIO</span>
+                    </h2>
+                    <p class="section-description">
+                        Explore uma seleção dos nossos projetos mais emblemáticos
+                    </p>
+                </div>
+
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="residencial">Residencial</button>
+                    <button class="filter-btn" data-filter="comercial">Comercial</button>
+                    <button class="filter-btn" data-filter="publico">Público</button>
+                    <button class="filter-btn" data-filter="interior">Interior</button>
+                </div>
+
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Projects will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1599696848652-f0ff23bc911f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBpbnRlcmlvcnxlbnwwfHx8fDE3NTgzMTMwNzJ8MA&ixlib=rb-4.1.0&q=85" alt="Sobre">
+                        <div class="about-image-overlay"></div>
+                        <div class="about-deco-1"></div>
+                        <div class="about-deco-2"></div>
+                    </div>
+                    
+                    <div class="about-text">
+                        <h2 class="section-title">
+                            SOBRE <span class="title-accent">MIM</span>
+                        </h2>
+                        
+                        <div class="about-info">
+                            <h3 class="about-name">Arquiteto Especialista</h3>
+                            <p class="about-role">Arquiteto & Designer</p>
+                        </div>
+
+                        <p class="about-description">
+                            Mais de 10 anos de experiência criando espaços únicos e funcionais. 
+                            Especializado em arquitetura contemporânea e design de interiores de luxo.
+                        </p>
+
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <i data-lucide="clock"></i>
+                                <div class="stat-value">10+ anos</div>
+                                <div class="stat-label">Experiência</div>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="building-2"></i>
+                                <div class="stat-value">150+ projetos</div>
+                                <div class="stat-label">Projetos</div>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="users"></i>
+                                <div class="stat-value">50+</div>
+                                <div class="stat-label">Clientes Satisfeitos</div>
+                            </div>
+                        </div>
+
+                        <button class="about-cta">BAIXAR CURRÍCULO</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        NOSSOS <span class="title-accent">SERVIÇOS</span>
+                    </h2>
+                    <p class="section-description">
+                        Oferecemos soluções completas para todos os seus projetos arquitetônicos
+                    </p>
+                </div>
+
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Services will be dynamically loaded -->
+                </div>
+
+                <div class="services-cta">
+                    <div class="cta-box">
+                        <h3>Pronto para começar seu projeto?</h3>
+                        <p>Entre em contato conosco hoje mesmo e vamos transformar suas ideias em realidade.</p>
+                        <button onclick="scrollToSection('contact')">SOLICITAR ORÇAMENTO</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="renders-gallery" class="renders-marquee">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">VISUALIZAÇÃO <span class="title-accent">3D</span></h2>
+            <p class="section-description">Imersão total antes mesmo da execução</p>
+        </div>
+    </div>
+    <div class="marquee-wrapper">
+        <div class="marquee-content" id="marqueeContent">
+            <div class="marquee-item"><img src="img/banheiro2.jpg" alt="Banheiro"></div>
+            <div class="marquee-item"><img src="img/ft.jpg" alt="Render"></div>
+            <div class="marquee-item"><img src="img/render sala.jpg"Render"></div>
+            <div class="marquee-item"><img src="img/loja.jpg" alt="Render"></div>
+             <div class="marquee-item"><img src="img/render sala 2.png" alt="Render"></div>
+            <div class="marquee-item"><img src="img/LOJA 2.png" alt="Render"></div>
+            <div class="marquee-item"><img src="img/REENDER 2.png"Render"></div>
+            <div class="marquee-item"><img src="img/COZINHA EDIT GRANDE.jpg" alt="Render"></div>
+              <div class="marquee-item"><img src="img/quarto, projeto segunda unidade.jpg" alt="Render"></div>
+            <div class="marquee-item"><img src="img/enhanced_A MELHOR.png" alt="Render"></div>
+            <div class="marquee-item"><img src="img/enhanced_MESA JANTAR MELHOR.png"Render"></div>
+            <div class="marquee-item"><img src="img/4.2.jpg" alt="Render"></div>
+        </div>
+    </div>
+</section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        ENTRE EM <span class="title-accent">CONTATO</span>
+                    </h2>
+                    <p class="section-description">
+                        Vamos conversar sobre o seu próximo projeto arquitetônico
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <i data-lucide="mail"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">wesleysouza.arq@gmail.com</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i data-lucide="phone"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Telefone</span>
+                                    <span class="contact-value">(83) 98833-2151</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i data-lucide="map-pin"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Endereço</span>
+                                    <span class="contact-value">João Pessoa, PB - Brasil</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="business-hours">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 8:00 - 18:00</p>
+                            <p>Sábado: 8:00 - 12:00</p>
+                            <p>Domingo: Fechado</p>
+                        </div>
+                    </div>
+
+                   <div class="contact-form">
+    <form id="contactForm" action="https://formspree.io/f/xqeekrvr" method="POST">
+        <h3>Solicite um Orçamento</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nome Completo *</label>
+                                    <input type="text" name="name" required placeholder="Seu nome">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Email *</label>
+                                    <input type="email" name="email" required placeholder="seu@email.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Telefone</label>
+                                    <input type="tel" name="phone" placeholder="(83) 99999-9999">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Tipo de Projeto</label>
+                                    <select name="project">
+                                        <option value="">Selecione</option>
+                                        <option value="residencial">Residencial</option>
+                                        <option value="comercial">Comercial</option>
+                                        <option value="publico">Público</option>
+                                        <option value="interior">Design de Interiores</option>
+                                        <option value="consultoria">Consultoria</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Mensagem *</label>
+                                <textarea name="message" required rows="5" placeholder="Descreva seu projeto e necessidades..."></textarea>
+                            </div>
+                            
+                           <button type="submit" class="form-submit">
+    ENVIAR MENSAGEM <i data-lucide="send" class="icon-send"></i>
+</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-accent">ARQ</span>DESIGN
+                    </div>
+                    <p class="footer-description">
+                        Criamos espaços únicos que combinam funcionalidade, estética e sustentabilidade. 
+                        Cada projeto é uma obra de arte arquitetônica.
+                    </p>
+                                      <div class="social-links">
+    <a href="https://www.instagram.com/wsldesigner/" target="_blank" class="social-link" aria-label="Instagram">
+        <i data-lucide="instagram"></i>
+    </a>
+    
+    <a href="https://www.linkedin.com/in/wesley-souza-4523b5189/" target="_blank" class="social-link" aria-label="LinkedIn">
+        <i data-lucide="linkedin"></i>
+    </a>
+</div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>       
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul class="footer-services">
+                        <li>Projetos Arquitetônicos</li>
+                        <li>Design de Interiores</li>
+                        <li>Renders 3D</li>
+                        <li>Consultoria</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                       <div class="footer-contact">
+        <p><i data-lucide="mail"></i> wesleysouza.arq@gmail.com</p>
+        <p><i data-lucide="phone"></i> (83) 98833-2151</p>
+        <p><i data-lucide="map-pin"></i> João Pessoa, PB - Brasil</p>
+    </div>
+</div>
+                    <div class="footer-hours">
+                        <h5>Horário de Atendimento</h5>
+                        <p>Seg-Sex: 8:00-18:00<br>Sáb: 8:00-12:00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 ARQDesign. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✅</div>
+            <h3>Mensagem Enviada!</h3>
+            <p>Obrigado pelo contato. Retornaremos em breve.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
